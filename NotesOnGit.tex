@@ -83,4 +83,26 @@ Markdown is useful to edit text that translates easily into html format. Markdow
 
 Download atom (text editor that can use markdown). To get a markdown preview, do ``ctrl+shift+p'' and search for ``install packages and themes''. From here, get markdown writer preview.
 
+\section{Day 1 - Afternoon Session}
+Committing files is a two-step process. First, as unstaged files, we can save all or line-by-line. Stage files, and then write a commit message for future self or collaborators. This is the message that will show up in the history tree.
+\begin{itemize}
+\item Git will keep track of all changes in the files, as well as change of file names. (In command line, you can use git mv).
+
+\item You should commit every time you make some sort of set of changes that go together, or changes that add some functionality.
+\item The order of the tree is time sequential - not best code.
+\item The benefit of the GUI vs command line: you can see the relationships between branches. 
+\item To create branch, right click and then choose ``create branch''.
+\item Generally, you don't want to amend the commits, because then you are breaking the graph. If you rewrite history, everyone else on that project has to do the same.
+\end{itemize}
+
+Instructions for merge:
+\begin{enumerate}
+  \item Checkout master \emph{*generally you merge into master}
+  \item Drag branch that you want to merge and drop it into master
+  \item Select ``merge branch into master.''
+  \item If merge conflicts exist, open comparison view and resolve before confirming merge.
+\end{enumerate}
+
+
+
 \end{document}
