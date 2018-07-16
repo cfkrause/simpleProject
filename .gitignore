@@ -10,6 +10,7 @@
 *.out
 *.toc
 *.pdf
+*.png
 
 ## Intermediate documents:
 *.dvi
