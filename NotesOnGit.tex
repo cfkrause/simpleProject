@@ -30,14 +30,52 @@
 \newcommand{\bigo}{\mathcal{O}}
 \newcommand{\X}{\mathcal{X}}
 
-\title{Notes on git and github}
+\title{Building Software in Teams}
 \author{Cassidy F. Krause}
 \date{July 16, 2018}
 \begin{document}
 \maketitle
 
 \section{Day 1 - Morning session.}
+\subsection{Setting up Git and Github}
+\begin{itemize}
+\item Later today, read documentation about integration of Matlab and Git.
+\item Git commands in command line: single dash for a letter, and double for a word. 
+    \subitem Eg: git config --global
+\item To synchronize end of line character across different platforms:
+    \subitem Windows: git config --global core.autofclf true
+    \subitem Mac/Linux: git config --global core.autofclf input
+\item Automatic text editor in GitBash is vi
+\end{itemize}
+\subsection{Intro to Git and GitKraken}
+\begin{itemize}
+\item Git is a distributed version control system. It is different from Github, which works as a sort of server for Git.
+\end{itemize}
 
-Update \#1.
+Suppose we have two different versions of the same code. Version 1, the original, has:
+\begin{align*}
+  &foo = 1;\\
+  &bar = 2;
+\end{align*} while Version 2 has an additional variable:
+\begin{align*}
+  &foo = 1;\\
+  &bar = 2;\\
+  &baz = 3;
+\end{align*}
+Each of these versions has a label, and we can create a directed graph of the changes between them.
+\includegraphics[width = \textwidth]{BranchDiagram.png}
+
+Each of the circles in the diagram would have its own label, and the pointer ``head'' would point to the current working directory. Git is a directed graph that saves the change sets. That is, each snapshot saves the changes, not the file itself. You can also name the branches and add tags for better organization.
+
+The typical workflow is set up as:
+\begin{itemize}
+  \item Add branches to address bugs or add features
+  \item Merge after separate issues have been addressed
+  \item Use tags for different versions
+\end{itemize}
+
+This sort of workflow is much easier to see in the GUI (Eg., GitKraken) rather than the command line; however, the command line can do everything that GitKraken can do and is generally more powerful.
+
+The general rule of thumb is to do version control on inputs (not outputs). For example, for this project, I am just tracking changes in the *.tex file, and not in the auxiliary or *.pdf files. Also, don't do version control with data. To ignore these auxiliary files, add their extensions to the gitignore file.
 
 \end{document}
